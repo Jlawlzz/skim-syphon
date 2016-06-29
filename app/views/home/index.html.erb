@@ -1,0 +1,30 @@
+<h1> Welcome to Skim-Syphon </h1>
+
+<%= simple_form_for :user, url: '/signup', method: :post do |f| %>
+  <div class="form-group">
+    <h2 class="form-text">username:</h2>
+    <%= f.text_field :username %>
+    <br>
+  </div>
+
+  <div class="form-group">
+    <h2 class="form-text">password:</h2>
+    <%= f.text_field :password %>
+    <br>
+  </div>
+
+  <div class="form-group">
+    <h2 class="form-text">confirm password:</h2>
+    <%= f.text_field :password_confirmation %>
+    <br>
+  </div>
+
+  <div class="form-group">
+      <%= f.submit "signup"  %>
+  </div>
+
+<% end %>
+
+<br>
+
+<%= link_to "login", login_path %>
